@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import './Header.scss';
+import Resume from "../../assets/Resume/SaiSriCharan.pdf";
 
 const scaleVariants = {
   whileInView: {
@@ -15,6 +16,12 @@ const scaleVariants = {
     },
   },
 };
+
+const downloadFile = () => {
+  const host = window.location.host;
+  const url = `http://${host}/static/media/SaiSriCharan.29473777c07b20295d92.pdf`;
+  window.open(url, '_blank');
+}
 
 const Header = () => (
   <div className="app__header app__flex">
@@ -35,7 +42,7 @@ const Header = () => (
         <div className="tag-cmp app__flex">
           <p className="p-text">Web Developer</p>
         </div>
-        <div className="tag-cmp app__flex" >
+        <div className="tag-cmp app__flex hover:cursor-pointer transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 " onClick={downloadFile} >
           <p className="p-text">Download Resume</p>
         </div>
       </div>

@@ -242,7 +242,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 4rem;
+  padding-top: 3rem;
 
   img {
     width: 80%;
@@ -262,5 +262,11 @@
 
   @media screen and (max-width: 1200px) {
     margin: 2rem 0;
+  }
+
+  .Resume{
+    border: 15px;
+    border-color: black;
+    text-decoration-line: none;
   }
 }
